@@ -49,7 +49,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "mentah_health_tracker.urls"
+ROOT_URLCONF = "mental_health_tracker.urls"
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "mentah_health_tracker.wsgi.application"
+WSGI_APPLICATION = "mental_health_tracker.wsgi.application"
 
 
 # Database
