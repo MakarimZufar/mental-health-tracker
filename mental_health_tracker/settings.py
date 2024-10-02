@@ -30,7 +30,6 @@ DEBUG = not PRODUCTION
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1","makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id","https://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/","http://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
