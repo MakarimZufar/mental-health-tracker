@@ -25,7 +25,7 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://makarim-zu
 SECRET_KEY = "django-insecure-hvpc@x)p)899o0r=@$sd^&29fn!-ggi)t5%i5&kw-8z%3x&(1w"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-PRODUCTION = os.environ.get("PRODUCTION", False)
+PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1","makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id","https://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/","http://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/"]
