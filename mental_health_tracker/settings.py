@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-hvpc@x)p)899o0r=@$sd^&29fn!-ggi)t5%i5&kw-8z%3x&(1w
 PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id","https://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/","http://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1","makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id","https://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/","http://makarim-zufar-mentalhealthtracker.pbp.cs.ui.ac.id/","10.0.2.2"]
 
 # Application definition
 
@@ -40,9 +40,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "main",
+    "corsheaders",
+    "authentication",
+    "django-cors-headers"
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -115,7 +119,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
